@@ -12,11 +12,11 @@ function ConfetiCat() {
       jsConfetti.addConfetti({
         emojis: [emoji],
         emojiSize: 70,
-        confettiNumber: 40,
+        confettiNumber: 15,
       });
     };
 
-    const buttons = confettiContainerRef.current.querySelectorAll('.confettiButton');
+    const buttons = confettiContainerRef.current.querySelectorAll('.confeticat');
     buttons.forEach(button => {
       button.addEventListener('click', () => handleButtonClick(button));
     });
