@@ -19,6 +19,7 @@ import { useSetRecoilState } from "recoil";
 import authScreenAtom from "../atoms/authAtom";
 import useShowToast from "../hooks/useShowToast";
 import userAtom from "../atoms/userAtom";
+import ConfetiCat from "./ConfetiCat";
 
 export default function LoginCard() {
 	const [showPassword, setShowPassword] = useState(false);
@@ -113,7 +114,18 @@ export default function LoginCard() {
 							>
 								Login
 							</Button>
+
+
 						</Stack>
+
+						<Flex align={"center"} justify={"center"}>
+      {/* ... other elements */}
+
+      <ConfetiCat />
+
+      {/* ... other elements */}
+    </Flex>
+
 						<Stack pt={6}>
 							<Text align={"center"}>
 								Don&apos;t have an account?{" "}
