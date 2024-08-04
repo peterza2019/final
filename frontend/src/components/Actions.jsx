@@ -113,10 +113,10 @@ const Actions = ({ post }) => {
 					aria-label='Like'
 					color={liked ? "rgb(237, 73, 86)" : ""}
 					fill={liked ? "rgb(237, 73, 86)" : "transparent"}
-					height='19'
+					height='39'
 					role='img'
 					viewBox='0 0 24 22'
-					width='20'
+					width='40'
 					onClick={handleLikeAndUnlike}
 				>
 					<path
@@ -130,10 +130,10 @@ const Actions = ({ post }) => {
 					aria-label='Comment'
 					color=''
 					fill=''
-					height='20'
+					height='40'
 					role='img'
 					viewBox='0 0 24 24'
-					width='20'
+					width='40'
 					onClick={onOpen}
 				>
 					<title>Comment</title>
@@ -202,10 +202,10 @@ const RepostSVG = () => {
 			aria-label='Repost'
 			color='currentColor'
 			fill='currentColor'
-			height='20'
+			height='40'
 			role='img'
 			viewBox='0 0 24 24'
-			width='20'
+			width='40'
 		>
 			<title>Repost</title>
 			<path
@@ -222,10 +222,10 @@ const ShareSVG = () => {
 			aria-label='Share'
 			color=''
 			fill='rgb(243, 245, 247)'
-			height='20'
+			height='40'
 			role='img'
 			viewBox='0 0 24 24'
-			width='20'
+			width='40'
 		>
 			<title>Share</title>
 			<line
