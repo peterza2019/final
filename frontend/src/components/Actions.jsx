@@ -19,6 +19,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import userAtom from "../atoms/userAtom";
 import useShowToast from "../hooks/useShowToast";
 import postsAtom from "../atoms/postsAtom";
+import ConfetiCat from "./ConfetiCat";
 
 const Actions = ({ post }) => {
 	const user = useRecoilValue(userAtom);
@@ -144,6 +145,14 @@ const Actions = ({ post }) => {
 						strokeWidth='2'
 					></path>
 				</svg>
+
+				<Flex align={"center"} justify={"center"}>
+      {/* ... other elements */}
+
+      <ConfetiCat />
+
+      {/* ... other elements */}
+    </Flex>
 
 				<RepostSVG />
 				<ShareSVG />
