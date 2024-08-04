@@ -71,7 +71,7 @@ export default function UpdateProfilePage() {
 					p={6}
 				>
 					<Heading lineHeight={1.1} fontSize={{ base: "2xl", sm: "3xl" }}>
-						User Profile Edit
+						Edit Pet Profile
 					</Heading>
 					<FormControl id='userName'>
 						<Stack direction={["column", "row"]} spacing={6}>
@@ -80,28 +80,28 @@ export default function UpdateProfilePage() {
 							</Center>
 							<Center w='full'>
 								<Button w='full' onClick={() => fileRef.current.click()}>
-									Change Avatar
+									Change Profile Pic
 								</Button>
 								<Input type='file' hidden ref={fileRef} onChange={handleImageChange} />
 							</Center>
 						</Stack>
 					</FormControl>
 					<FormControl>
-						<FormLabel>Full name</FormLabel>
+						<FormLabel>Pets Name</FormLabel>
 						<Input
 							placeholder='John Doe'
-							value={inputs.name}
-							onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
+							value={inputs.usernamename}
+							onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
 							_placeholder={{ color: "gray.500" }}
 							type='text'
 						/>
 					</FormControl>
 					<FormControl>
-						<FormLabel>User name</FormLabel>
+						<FormLabel>Your Name</FormLabel>
 						<Input
 							placeholder='johndoe'
-							value={inputs.username}
-							onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
+							value={inputs.name}
+							onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
 							_placeholder={{ color: "gray.500" }}
 							type='text'
 						/>
@@ -117,7 +117,7 @@ export default function UpdateProfilePage() {
 						/>
 					</FormControl>
 					<FormControl>
-						<FormLabel>Bio</FormLabel>
+						<FormLabel>Your Pets Story & Bio</FormLabel>
 						<Input
 							placeholder='Your bio.'
 							value={inputs.bio}

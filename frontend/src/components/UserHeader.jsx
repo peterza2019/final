@@ -38,7 +38,7 @@ const UserHeader = ({ user }) => {
 					<Flex gap={2} alignItems={"center"}>
 						<Text fontSize={"sm"}>{user.username}</Text>
 						<Text fontSize={"xs"} bg={"gray.dark"} color={"gray.light"} p={1} borderRadius={"full"}>
-							threads.net
+							petstagram.co.za
 						</Text>
 					</Flex>
 				</Box>
@@ -70,7 +70,7 @@ const UserHeader = ({ user }) => {
 
 			{currentUser?._id === user._id && (
 				<Link as={RouterLink} to='/update'>
-					<Button size={"sm"}>Update Profile</Button>
+					<Button size={"sm"}>Edit Pet Profile</Button>
 				</Link>
 			)}
 			{currentUser?._id !== user._id && (
@@ -82,7 +82,7 @@ const UserHeader = ({ user }) => {
 				<Flex gap={2} alignItems={"center"}>
 					<Text color={"gray.light"}>{user.followers.length} followers</Text>
 					<Box w='1' h='1' bg={"gray.light"} borderRadius={"full"}></Box>
-					<Link color={"gray.light"}>instagram.com</Link>
+					<Link color={"gray.light"}>petstagram.co.za</Link>
 				</Flex>
 				<Flex>
 					<Box className='icon-container'>
@@ -107,7 +107,7 @@ const UserHeader = ({ user }) => {
 
 			<Flex w={"full"}>
 				<Flex flex={1} borderBottom={"1.5px solid white"} justifyContent={"center"} pb='3' cursor={"pointer"}>
-					<Text fontWeight={"bold"}> Threads</Text>
+					<Text fontWeight={"bold"}> Posts</Text>
 				</Flex>
 				<Flex
 					flex={1}

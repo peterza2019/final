@@ -70,7 +70,7 @@ export default function SignupCard() {
 						<HStack>
 							<Box>
 								<FormControl isRequired>
-									<FormLabel>Full name</FormLabel>
+									<FormLabel>Pets Name</FormLabel>
 									<Input
 										type='text'
 										onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
@@ -80,7 +80,7 @@ export default function SignupCard() {
 							</Box>
 							<Box>
 								<FormControl isRequired>
-									<FormLabel>Username</FormLabel>
+									<FormLabel>Your Name</FormLabel>
 									<Input
 										type='text'
 										onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
@@ -90,7 +90,7 @@ export default function SignupCard() {
 							</Box>
 						</HStack>
 						<FormControl isRequired>
-							<FormLabel>Email address</FormLabel>
+							<FormLabel>Verified Email address</FormLabel>
 							<Input
 								type='email'
 								onChange={(e) => setInputs({ ...inputs, email: e.target.value })}

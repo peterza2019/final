@@ -74,11 +74,11 @@ export default function LoginCard() {
 				>
 					<Stack spacing={4}>
 						<FormControl isRequired>
-							<FormLabel>Username</FormLabel>
+							<FormLabel>Pets Name</FormLabel>
 							<Input
 								type='text'
-								value={inputs.username}
-								onChange={(e) => setInputs((inputs) => ({ ...inputs, username: e.target.value }))}
+								value={inputs.name}
+								onChange={(e) => setInputs((inputs) => ({ ...inputs, name: e.target.value }))}
 							/>
 						</FormControl>
 						<FormControl isRequired>
