@@ -1,6 +1,7 @@
 import { Avatar, Box, Button, Flex, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import useFollowUnfollow from "../hooks/useFollowUnfollow";
+import '../styles/followbutton.css';
 
 const SuggestedUser = ({ user }) => {
 	const { handleFollowUnfollow, following, updating } = useFollowUnfollow(user);
@@ -20,19 +21,24 @@ const SuggestedUser = ({ user }) => {
 				</Box>
 			</Flex>
 			{/* right side */}
-			<Button
-				size={"sm"}
-				color={following ? "black" : "white"}
-				bg={following ? "white" : "blue.400"}
-				onClick={handleFollowUnfollow}
-				isLoading={updating}
-				_hover={{
-					color: following ? "black" : "white",
-					opacity: ".8",
-				}}
-			>
-				{following ? "Unfollow" : "Follow"}
-			</Button>
+			<Flex>
+  {/* right side */}
+  <Button
+    size={"sm"}
+    color={following ? "black" : "white"}
+    bg={following ? "white" : "blue.400"}
+    onClick={handleFollowUnfollow}
+    isLoading={updating}
+    _hover={{
+      color: following ? "black" : "white",
+      opacity: ".8", 
+
+    }}
+    className="follow-button color-2" // Apply the CSS class here
+  >
+    {following ? "Unfollow" : "Follow"}
+  </Button>
+</Flex>
 		</Flex>
 	);
 };
