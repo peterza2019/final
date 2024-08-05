@@ -31,7 +31,7 @@ const colors = {
 	},
 };
 
-const theme = extendTheme({ config, styles, colors });
+const theme = extendTheme({ config, styles, colors,cssVarPrefix: 'ck', });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	// React.StrictMode renders every component twice (in the initial render), only in development.
