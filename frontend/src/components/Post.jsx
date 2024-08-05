@@ -137,7 +137,7 @@ const Post = ({ post, postedBy }) => {
 
 					<Text fontSize={"sm"}>{post.text}</Text>
 					{post.img && (
-						<Box borderRadius={6} overflow={"hidden"} border={"1px solid"} borderColor={"gray.light"}>
+						<Box borderRadius={6} overflow={"hidden"} border={"2px solid"} borderColor={"orange.light"}>
 							<Image src={post.img} w={"full"} />
 						</Box>
 					)}

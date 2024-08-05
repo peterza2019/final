@@ -5,6 +5,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Actions from "./Actions";
 import { useState } from "react";
+import { px } from "framer-motion";
 
 const UserPost = ({ postImg, postTitle, likes, replies }) => {
 	const [liked, setLiked] = useState(false);
@@ -13,7 +14,7 @@ const UserPost = ({ postImg, postTitle, likes, replies }) => {
 			<Flex gap={3} mb={4} py={5}>
 				<Flex flexDirection={"column"} alignItems={"center"}>
 					<Avatar size='md' name='Mark Zuckerberg' src='/zuck-avatar.png' />
-					<Box w='1px' h={"full"} bg='gray.light' my={2}></Box>
+					<Box w='15px' h={"full"} bg={'orange.dark'} my={2}></Box>
 					<Box position={"relative"} w={"full"}>
 						<Avatar
 							size='xs'
@@ -23,6 +24,7 @@ const UserPost = ({ postImg, postTitle, likes, replies }) => {
 							top={"0px"}
 							left='15px'
 							padding={"2px"}
+							borderRadius={"2px"}
 						/>
 						<Avatar
 							size='xs'
@@ -73,11 +75,11 @@ const UserPost = ({ postImg, postTitle, likes, replies }) => {
 
 					<Flex gap={2} alignItems={"center"}>
 						<Text color={"gray.light"} fontSize='sm'>
-							{replies} replies
+						{likes} likes 
 						</Text>
 						<Box w={0.5} h={0.5} borderRadius={"full"} bg={"gray.light"}></Box>
 						<Text color={"gray.light"} fontSize='sm'>
-							{likes} likes
+						{replies} replies
 						</Text>
 					</Flex>
 				</Flex>

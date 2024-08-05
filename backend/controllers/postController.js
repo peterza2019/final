@@ -8,7 +8,7 @@ const createPost = async (req, res) => {
 		let { img } = req.body;
 
 		if (!postedBy || !text) {
-			return res.status(400).json({ error: "Postedby and text fields are required" });
+			return res.status(400).json({ error: "You have to write something to post" });
 		}
 
 		const user = await User.findById(postedBy);
@@ -17,7 +17,7 @@ const createPost = async (req, res) => {
 		}
 
 		if (user._id.toString() !== req.user._id.toString()) {
-			return res.status(401).json({ error: "Unauthorized to create post" });
+			return res.status(401).json({ error: "You have to be logged in to create a post" });
 		}
 
 		const maxLength = 500;

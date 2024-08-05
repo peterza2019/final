@@ -32,11 +32,11 @@ const getUserProfile = async (req, res) => {
 
 const signupUser = async (req, res) => {
 	try {
-		const { name, email, username, password } = req.body;
+		const { name, email, username, password,species } = req.body;
 		const user = await User.findOne({ $or: [{ email }, { username }] });
 
 		if (user) {
-			return res.status(400).json({ error: "User already exists" });
+			return res.status(400).json({ error: "This Pet Profile already exists" });
 		}
 		const salt = await bcrypt.genSalt(10);
 		const hashedPassword = await bcrypt.hash(password, salt);
@@ -45,6 +45,7 @@ const signupUser = async (req, res) => {
 			name,
 			email,
 			username,
+			species,
 			password: hashedPassword,
 		});
 		await newUser.save();
@@ -57,15 +58,17 @@ const signupUser = async (req, res) => {
 				name: newUser.name,
 				email: newUser.email,
 				username: newUser.username,
+				species:newUser.species,
+				breed: newUser.breed,
 				bio: newUser.bio,
 				profilePic: newUser.profilePic,
 			});
 		} else {
-			res.status(400).json({ error: "Invalid user data" });
+			res.status(400).json({ error: "Pet info is wrong" });
 		}
 	} catch (err) {
 		res.status(500).json({ error: err.message });
-		console.log("Error in signupUser: ", err.message);
+		console.log("Pet signup ERROR: ", err.message);
 	}
 };
 
@@ -75,7 +78,7 @@ const loginUser = async (req, res) => {
 		const user = await User.findOne({ username });
 		const isPasswordCorrect = await bcrypt.compare(password, user?.password || "");
 
-		if (!user || !isPasswordCorrect) return res.status(400).json({ error: "Invalid username or password" });
+		if (!user || !isPasswordCorrect) return res.status(400).json({ error: "Pet name or password is WRONG !" });
 
 		if (user.isFrozen) {
 			user.isFrozen = false;
@@ -90,21 +93,23 @@ const loginUser = async (req, res) => {
 			email: user.email,
 			username: user.username,
 			bio: user.bio,
+			species: user.species,
+			breed: breed.species,
 			profilePic: user.profilePic,
 		});
 	} catch (error) {
 		res.status(500).json({ error: error.message });
-		console.log("Error in loginUser: ", error.message);
+		console.log("Pet Login Failed: ", error.message);
 	}
 };
 
 const logoutUser = (req, res) => {
 	try {
 		res.cookie("jwt", "", { maxAge: 1 });
-		res.status(200).json({ message: "User logged out successfully" });
+		res.status(200).json({ message: "Logged out 100%" });
 	} catch (err) {
 		res.status(500).json({ error: err.message });
-		console.log("Error in signupUser: ", err.message);
+		console.log("Pet Signup has Failed: ", err.message);
 	}
 };
 
@@ -117,7 +122,7 @@ const followUnFollowUser = async (req, res) => {
 		if (id === req.user._id.toString())
 			return res.status(400).json({ error: "You cannot follow/unfollow yourself" });
 
-		if (!userToModify || !currentUser) return res.status(400).json({ error: "User not found" });
+		if (!userToModify || !currentUser) return res.status(400).json({ error: "Pet profile not found" });
 
 		const isFollowing = currentUser.following.includes(id);
 
@@ -125,12 +130,12 @@ const followUnFollowUser = async (req, res) => {
 			// Unfollow user
 			await User.findByIdAndUpdate(id, { $pull: { followers: req.user._id } });
 			await User.findByIdAndUpdate(req.user._id, { $pull: { following: id } });
-			res.status(200).json({ message: "User unfollowed successfully" });
+			res.status(200).json({ message: "Unfollowed successfully" });
 		} else {
 			// Follow user
 			await User.findByIdAndUpdate(id, { $push: { followers: req.user._id } });
 			await User.findByIdAndUpdate(req.user._id, { $push: { following: id } });
-			res.status(200).json({ message: "User followed successfully" });
+			res.status(200).json({ message: "Followed successfully" });
 		}
 	} catch (err) {
 		res.status(500).json({ error: err.message });
@@ -145,10 +150,10 @@ const updateUser = async (req, res) => {
 	const userId = req.user._id;
 	try {
 		let user = await User.findById(userId);
-		if (!user) return res.status(400).json({ error: "User not found" });
+		if (!user) return res.status(400).json({ error: "Pet profile not found" });
 
 		if (req.params.id !== userId.toString())
-			return res.status(400).json({ error: "You cannot update other user's profile" });
+			return res.status(400).json({ error: "You cannot update other pets profile" });
 
 		if (password) {
 			const salt = await bcrypt.genSalt(10);
@@ -191,7 +196,7 @@ const updateUser = async (req, res) => {
 		res.status(200).json(user);
 	} catch (err) {
 		res.status(500).json({ error: err.message });
-		console.log("Error in updateUser: ", err.message);
+		console.log("Pet profile update FAILED: ", err.message);
 	}
 };
 
@@ -227,7 +232,7 @@ const freezeAccount = async (req, res) => {
 	try {
 		const user = await User.findById(req.user._id);
 		if (!user) {
-			return res.status(400).json({ error: "User not found" });
+			return res.status(400).json({ error: "Pet not found" });
 		}
 
 		user.isFrozen = true;

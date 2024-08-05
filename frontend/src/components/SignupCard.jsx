@@ -6,6 +6,7 @@ import {
 	Input,
 	InputGroup,
 	HStack,
+	Select,
 	InputRightElement,
 	Stack,
 	Button,
@@ -73,8 +74,8 @@ export default function SignupCard() {
 									<FormLabel>Pets Name</FormLabel>
 									<Input
 										type='text'
-										onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
-										value={inputs.name}
+										onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
+										value={inputs.username}
 									/>
 								</FormControl>
 							</Box>
@@ -83,12 +84,30 @@ export default function SignupCard() {
 									<FormLabel>Your Name</FormLabel>
 									<Input
 										type='text'
-										onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
-										value={inputs.username}
+										onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
+										value={inputs.name}
 									/>
 								</FormControl>
 							</Box>
+
 						</HStack>
+
+<Box>
+<FormControl isRequired>
+<FormLabel>Type of Pet ? 🐈 🐕 🐟 🐦 🐻 </FormLabel>
+
+  
+  <Select >
+    <option>Cat</option>
+    <option>Dog</option>
+    <option>Fish</option>
+    <option>Bird</option>
+    <option>Other</option>
+  </Select>
+ 
+</FormControl>
+
+							</Box>Box
 						<FormControl isRequired>
 							<FormLabel>Verified Email address</FormLabel>
 							<Input
