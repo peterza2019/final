@@ -30,4 +30,14 @@
   
     }
 
+    .follow-button {
+      /* Existing styles from your custom-button class (adjust as needed) */
+      margin: 10px auto; /* Adjust margin for better alignment */
+      width: fit-content; /* Dynamically adjust width based on content */
+    }
+    
+    .follow-button.color-2 {
+      /* Additional styles for color variation (if needed) */
+    }
+
 };
