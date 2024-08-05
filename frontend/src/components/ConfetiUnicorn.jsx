@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import JSConfetti from 'js-confetti';
-import catImage from '../assets/cat.svg'; // Replace with your image path
+import catImage from '../assets/unicorn.svg'; // Replace with your image path
 
-function ConfetiCat() {
+function ConfetiUnicorn() {
   const confettiContainerRef = useRef(null);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function ConfetiCat() {
       });
     };
 
-    const buttons = confettiContainerRef.current.querySelectorAll('.confeticat');
+    const buttons = confettiContainerRef.current.querySelectorAll('.confetiunicorn');
     buttons.forEach(button => {
       button.addEventListener('click', handleButtonClick);
     });
@@ -26,12 +26,12 @@ function ConfetiCat() {
 
   return (
     <div ref={confettiContainerRef} className="buttons">
-      <button className="confeticat">
-        <img src={catImage} alt="Cat" width="50" height="50" />
+      <button className="confetiunicorn">
+        <img src={catImage} alt="Unicorn" width="50" height="50" />
       </button>
       {/* ... other buttons */}
     </div>
   );
 }
 
-export default ConfetiCat;
+export default ConfetiUnicorn;
