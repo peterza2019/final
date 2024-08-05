@@ -81,6 +81,9 @@ const UserPost = ({ postImg, postTitle, likes, replies }) => {
 						<Text color={"gray.light"} fontSize='sm'>
 						{replies} replies
 						</Text>
+						<Text color={"blue.500"} fontSize='lg'>
+						 CLICK ON SPEECH BUBBLE TO REPLY
+						</Text>
 					</Flex>
 				</Flex>
 			</Flex>

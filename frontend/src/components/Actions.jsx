@@ -116,10 +116,10 @@ const Actions = ({ post }) => {
 					aria-label='Like'
 					color={liked ? "rgb(237, 73, 86)" : ""}
 					fill={liked ? "rgb(237, 73, 86)" : "transparent"}
-					height='39'
+					height='45'
 					role='img'
 					viewBox='0 0 24 22'
-					width='40'
+					width='45'
 					
 				>
 					<path
@@ -170,7 +170,7 @@ const Actions = ({ post }) => {
 
 		
 			<Flex gap={3} alignItems={"center"}>
-			<Box w={0.5} h={0.5} borderRadius={"full"} bg={"orange.900"}></Box>
+			<Box w={1} h={1} borderRadius={"full"} bg={"orange.900"}></Box>
 
 			<svg
 					aria-label='Comment'
