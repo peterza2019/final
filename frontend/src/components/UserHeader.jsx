@@ -80,7 +80,7 @@ const UserHeader = ({ user }) => {
 			)}
 			<Flex w={"full"} justifyContent={"space-between"}>
 				<Flex gap={2} alignItems={"center"}>
-					<Text color={"gray.light"}>{user.followers.length} followers</Text>
+					<Text color={"gray.light"}>{}</Text>
 					<Box w='1' h='1' bg={"gray.light"} borderRadius={"full"}></Box>
 					<Link color={"gray.light"}>petstagram.co.za</Link>
 				</Flex>
@@ -96,7 +96,7 @@ const UserHeader = ({ user }) => {
 							<Portal>
 								<MenuList bg={"gray.dark"}>
 									<MenuItem bg={"gray.dark"} onClick={copyURL}>
-										Copy link
+										Copy & Share your Pets Profile link
 									</MenuItem>
 								</MenuList>
 							</Portal>
@@ -117,7 +117,7 @@ const UserHeader = ({ user }) => {
 					pb='3'
 					cursor={"pointer"}
 				>
-					<Text fontWeight={"bold"}> Replies</Text>
+					<Text fontWeight={"bold"}>{user.followers.length} Followers</Text>
 				</Flex>
 			</Flex>
 		</VStack>
