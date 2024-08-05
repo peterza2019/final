@@ -133,25 +133,7 @@ const Actions = ({ post }) => {
 					{post.likes.length} 
 				</Text>
 
-				<svg
-					aria-label='Comment'
-					color=''
-					fill=''
-					height='40'
-					role='img'
-					viewBox='0 0 24 24'
-					width='40'
-					onClick={onOpen}
-				>
-					<title>Comment</title>
-					<path
-						d='M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z'
-						fill='none'
-						stroke='currentColor'
-						strokeLinejoin='round'
-						strokeWidth='2'
-					></path>
-				</svg>
+				
 
 		
 
@@ -190,7 +172,25 @@ const Actions = ({ post }) => {
 			<Flex gap={3} alignItems={"center"}>
 			<Box w={0.5} h={0.5} borderRadius={"full"} bg={"orange.900"}></Box>
 
-			
+			<svg
+					aria-label='Comment'
+					color=''
+					fill=''
+					height='40'
+					role='img'
+					viewBox='0 0 24 24'
+					width='40'
+					onClick={onOpen}
+				>
+					<title>Comment</title>
+					<path
+						d='M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z'
+						fill='none'
+						stroke='currentColor'
+						strokeLinejoin='round'
+						strokeWidth='2'
+					></path>
+				</svg>
 				
 				
 				
