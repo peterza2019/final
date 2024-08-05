@@ -11,23 +11,7 @@ const userSchema = mongoose.Schema(
 			required: true,
 			unique: true,
 		},
-		species: {
-			type: String,
-			required: true,
-			unique: true,
-		},
-		breed: {
-			type: String,
-			required: false,
-			unique: true,
-		},
-
-		age: {
-			type:String,
-			required: false,
-			unique: false,
-		},
-
+		
 		email: {
 			type: String,
 			required: true,

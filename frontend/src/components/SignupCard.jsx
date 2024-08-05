@@ -6,7 +6,6 @@ import {
 	Input,
 	InputGroup,
 	HStack,
-	Select,
 	InputRightElement,
 	Stack,
 	Button,
@@ -93,18 +92,6 @@ export default function SignupCard() {
 						</HStack>
 
 <Box>
-<FormControl>
-<FormLabel>Type of Pet ? 🐈 🐕 🐟 🐦 🐻 </FormLabel>
- <Select >
-    <option>Cat</option>
-    <option>Dog</option>
-    <option>Fish</option>
-    <option>Bird</option>
-    <option>Other</option>
-  </Select>
- 
-</FormControl>
-
 							</Box>Box
 						<FormControl isRequired>
 							<FormLabel>Verified Email address</FormLabel>
