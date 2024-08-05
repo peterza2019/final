@@ -32,7 +32,7 @@ const getUserProfile = async (req, res) => {
 
 const signupUser = async (req, res) => {
 	try {
-		const { name, email, username, password,species } = req.body;
+		const { name, email, username, password, } = req.body;
 		const user = await User.findOne({ $or: [{ email }, { username }] });
 
 		if (user) {
@@ -45,7 +45,6 @@ const signupUser = async (req, res) => {
 			name,
 			email,
 			username,
-			species,
 			password: hashedPassword,
 		});
 		await newUser.save();
@@ -58,8 +57,6 @@ const signupUser = async (req, res) => {
 				name: newUser.name,
 				email: newUser.email,
 				username: newUser.username,
-				species:newUser.species,
-				breed: newUser.breed,
 				bio: newUser.bio,
 				profilePic: newUser.profilePic,
 			});
@@ -93,8 +90,6 @@ const loginUser = async (req, res) => {
 			email: user.email,
 			username: user.username,
 			bio: user.bio,
-			species: user.species,
-			breed: breed.species,
 			profilePic: user.profilePic,
 		});
 	} catch (error) {

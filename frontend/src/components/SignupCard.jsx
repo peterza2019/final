@@ -93,11 +93,9 @@ export default function SignupCard() {
 						</HStack>
 
 <Box>
-<FormControl isRequired>
+<FormControl>
 <FormLabel>Type of Pet ? 🐈 🐕 🐟 🐦 🐻 </FormLabel>
-
-  
-  <Select >
+ <Select >
     <option>Cat</option>
     <option>Dog</option>
     <option>Fish</option>
