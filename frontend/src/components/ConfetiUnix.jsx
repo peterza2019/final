@@ -12,7 +12,7 @@ function ConfettiButtonsu() {
       const emoji = button.getAttribute('data-emoji');
       jsConfetti.addConfetti({
         emojis: [emoji],
-        emojiSize: 80,
+        emojiSize: 165,
         confettiNumber: 10,
       });
     };
@@ -29,7 +29,7 @@ function ConfettiButtonsu() {
 
   return (
     <div ref={confettiContainerRef} className="buttons">
-    <button className="confettiButton" data-emoji="🦄" style={{ fontSize: '40px' }}>🦄 </button>
+    <button className="confettiButton" data-emoji="🦄" style={{ fontSize: '45px' }}>🦄 </button>
     {/* ... other buttons */}
   </div>
   );
