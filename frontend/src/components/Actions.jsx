@@ -194,8 +194,11 @@ const Actions = ({ post }) => {
 				
 				
 				
-				<Text color={"gray.light"} fontSize='sm'>
+				<Text color={"gray.light"} fontSize='xlg'>
 					{post.replies.length} Replies
+				</Text>
+				<Text color={"pink.800"} fontSize='xlg'>
+					{} CLICK TO VIEW & COMMENT
 				</Text>
 			
 
