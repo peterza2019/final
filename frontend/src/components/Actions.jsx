@@ -151,7 +151,7 @@ const Actions = ({ post }) => {
 
 		
 
-	  <Flex gap={5} align={"center"} justify={"center"}>
+	  <Flex gap={5} align={"flex-start"} justify={"center"}>
       {/* ... other elements */}
 
       < ConfettiButtonsc />
@@ -160,7 +160,7 @@ const Actions = ({ post }) => {
     </Flex>
 
 
-	<Flex gap={5} align={"center"} justify={"center"}>
+	<Flex gap={5} align={"flex-start"} justify={"center"}>
       {/* ... other elements */}
 
       < ConfettiButtonsd />
@@ -169,7 +169,7 @@ const Actions = ({ post }) => {
     </Flex>
 
 
-	<Flex gap={5} align={"center"} justify={"center"}>
+	<Flex gap={5} align={"flex-start"} justify={"center"}>
       {/* ... other elements */}
 
       < ConfettiButtonsu />
