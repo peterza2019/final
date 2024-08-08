@@ -62,10 +62,10 @@ const Header = () => {
 
 {user && (
   <Flex direction="column" alignItems="center" gap={2}>
-    <Link as={RouterLink} to={`/settings`}>
+    <Link as={RouterLink} to={`/suggested`}>
       <Image src={settingsIcon} alt="Settings" w={8} h={8} />
     </Link>
-    <Text fontSize="xs">Settings</Text>
+    <Text fontSize="xs">Pet Friends</Text>
   </Flex>
 )}
 {user && (

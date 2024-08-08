@@ -11,6 +11,7 @@ import UpdateProfilePage from "./pages/UpdateProfilePage";
 import CreatePost from "./components/CreatePost";
 import ChatPage from "./pages/ChatPage";
 import { SettingsPage } from "./pages/SettingsPage";
+import SuggestedUsers from "./components/SuggestedUsers";
 
 function App() {
   const user = useRecoilValue(userAtom);
@@ -44,6 +45,7 @@ function App() {
           />
           <Route path='/:username/post/:pid' element={<PostPage />} />
           <Route path='/chat' element={user ? <ChatPage /> : <Navigate to={"/auth"} />} />
+          <Route path='/suggested' element={user ? <SuggestedUsers /> : <Navigate to={"/suggested"} />} />
           <Route path='/settings' element={user ? <SettingsPage /> : <Navigate to={"/auth"} />} />
         </Routes>
       </Box>
