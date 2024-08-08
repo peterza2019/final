@@ -29,7 +29,7 @@ function ConfettiButtonsu() {
 
   return (
     <div ref={confettiContainerRef} className="buttons">
-    <button className="confettiButton" data-emoji="🦄" style={{ fontSize: '45px' }}>🦄 </button>
+    <button className="confettiButton" data-emoji="🦄" style={{ fontSize: '35px' }}>🦄 </button>
     {/* ... other buttons */}
   </div>
   );

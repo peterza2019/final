@@ -70,10 +70,10 @@ const Header = () => {
 )}
 {user && (
   <Flex direction="column" alignItems="center" gap={2}>
-    <Button size={"xs"} onClick={logout}>
+    <Button size={"sm"} onClick={logout}>
       <Image src={logoutIcon} alt="Logout" w={8} h={8} />
     </Button>
-    <Text fontSize="xs">Logout</Text>
+    <Text fontSize="sm">Logout</Text>
   </Flex>
 )}
 

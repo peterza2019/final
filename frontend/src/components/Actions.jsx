@@ -116,10 +116,10 @@ const Actions = ({ post }) => {
 					aria-label='Like'
 					color={liked ? "rgb(237, 73, 86)" : ""}
 					fill={liked ? "rgb(237, 73, 86)" : "transparent"}
-					height='45'
+					height='35'
 					role='img'
 					viewBox='0 0 24 22'
-					width='45'
+					width='35'
 					
 				>
 					<path
@@ -176,10 +176,10 @@ const Actions = ({ post }) => {
 					aria-label='Comment'
 					color=''
 					fill=''
-					height='40'
+					height='35'
 					role='img'
 					viewBox='0 0 24 24'
-					width='40'
+					width='35'
 					onClick={onOpen}
 				>
 					<title>Comment</title>
@@ -194,11 +194,11 @@ const Actions = ({ post }) => {
 				
 				
 				
-				<Text color={"gray.light"} fontSize='xlg'>
-					{post.replies.length} Replies
+				<Text color={"pink.800"} fontSize='xlg'>
+					{post.replies.length} Replies CLICK TO VIEW & COMMENT
 				</Text>
 				<Text color={"pink.800"} fontSize='xlg'>
-					{} CLICK TO VIEW & COMMENT
+					{}
 				</Text>
 			
 
