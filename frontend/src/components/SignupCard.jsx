@@ -4,6 +4,7 @@ import {
 	FormControl,
 	FormLabel,
 	Input,
+	Image,
 	InputGroup,
 	HStack,
 	InputRightElement,
@@ -62,12 +63,27 @@ export default function SignupCard() {
 			<Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
 				<Stack align={"center"}>
 					<Heading fontSize={"4xl"} textAlign={"center"}>
-						Sign up
+
 					</Heading>
+
+					<Flex align={"center"} justify={"center"}>
+  <Image
+    src="../src/assets/logo.svg"
+    alt="logo alt tag"
+    objectFit="contain"
+    borderRadius="md" // Add rounded corners
+    boxShadow="md" // Add shadow
+    maxW="80%" // Limit maximum width to 80% of container
+  />
+
+</Flex>
 				</Stack>
 				<Box rounded={"lg"} bg={useColorModeValue("white", "gray.dark")} boxShadow={"lg"} p={8}>
 					<Stack spacing={4}>
+
 						<HStack>
+
+
 							<Box>
 								<FormControl isRequired>
 									<FormLabel>Pets Name</FormLabel>

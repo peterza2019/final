@@ -12,6 +12,7 @@ import {
 	Text,
 	useColorModeValue,
 	Link,
+	Image
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
@@ -20,6 +21,9 @@ import authScreenAtom from "../atoms/authAtom";
 import useShowToast from "../hooks/useShowToast";
 import userAtom from "../atoms/userAtom";
 import ConfetiCat from "./ConfetiCat";
+
+
+
 
 export default function LoginCard() {
 	const [showPassword, setShowPassword] = useState(false);
@@ -63,6 +67,18 @@ export default function LoginCard() {
 						Login
 					</Heading>
 				</Stack>
+
+  <Flex align={"center"} justify={"center"}>
+  <Image
+    src="../src/assets/logo.svg"
+    alt=""
+    objectFit="contain"
+    borderRadius="md" // Add rounded corners
+    boxShadow="md" // Add shadow
+    maxW="80%" // Limit maximum width to 80% of container
+  />
+
+</Flex>
 				<Box
 					rounded={"lg"}
 					bg={useColorModeValue("white", "gray.dark")}
@@ -73,6 +89,7 @@ export default function LoginCard() {
 						sm: "400px",
 					}}
 				>
+
 					<Stack spacing={4}>
 						<FormControl isRequired>
 							<FormLabel>Pets Name</FormLabel>

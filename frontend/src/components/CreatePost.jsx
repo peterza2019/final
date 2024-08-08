@@ -90,7 +90,7 @@ const CreatePost = () => {
 				position={"fixed"}
 				bottom={10}
 				right={5}
-				bg={useColorModeValue("gray.300", "gray.dark")}
+				bg={useColorModeValue("orange.800", "orange.800")}
 				onClick={onOpen}
 				size={{ base: "sm", sm: "md" }}
 			>
@@ -140,7 +140,7 @@ const CreatePost = () => {
 					</ModalBody>
 
 					<ModalFooter>
-						<Button colorScheme='blue' mr={3} onClick={handleCreatePost} isLoading={loading}>
+						<Button colorScheme='pink' mr={3} onClick={handleCreatePost} isLoading={loading}>
 							Post
 						</Button>
 					</ModalFooter>
