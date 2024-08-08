@@ -95,7 +95,7 @@ const PostPage = () => {
 			<Text my={3}>{currentPost.text}</Text>
 
 			{currentPost.img && (
-				<Box borderRadius={6} overflow={"hidden"} border={"1px solid"} borderColor={"gray.light"}>
+				<Box borderRadius={6} overflow={"hidden"} border={"3px solid"} borderColor={"whiteAlpha.500"}>
 					<Image src={currentPost.img} w={"full"} />
 				</Box>
 			)}

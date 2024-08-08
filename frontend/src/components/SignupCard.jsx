@@ -68,7 +68,7 @@ export default function SignupCard() {
 
 					<Flex align={"center"} justify={"center"}>
   <Image
-    src="../src/assets/logo.svg"
+    src="./src/assets/logo.svg"
     alt="logo alt tag"
     objectFit="contain"
     borderRadius="md" // Add rounded corners

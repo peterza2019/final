@@ -1,0 +1,7 @@
+<Box
+				flex={30}
+				width={{ base: "100%", md: "30%" }}
+				mt={{ base: 8, md: 0 }}
+			>
+				<SuggestedUsers />
+			</Box>

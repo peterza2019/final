@@ -70,7 +70,7 @@ export default function LoginCard() {
 
   <Flex align={"center"} justify={"center"}>
   <Image
-    src="../src/assets/logo.svg"
+    src="./src/assets/logo.svg"
     alt=""
     objectFit="contain"
     borderRadius="md" // Add rounded corners
