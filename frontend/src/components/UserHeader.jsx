@@ -29,8 +29,8 @@ const UserHeader = ({ user }) => {
 	};
 
 	return (
-		<VStack gap={4} alignItems={"start"}>
-			<Flex justifyContent={"space-between"} w={"full"}>
+		<VStack gap={8} alignItems={"start"}>
+			<Flex mt={4} justifyContent={"space-between"} w={"full"} paddingTop={10}>
 				<Box>
 					<Text fontSize={"2xl"} fontWeight={"bold"}>
 						{user.name}
@@ -110,7 +110,7 @@ const UserHeader = ({ user }) => {
 					<Text fontWeight={"bold"}> Posts</Text>
 				</Flex>
 				<Flex
-					flex={1}
+					flex={3}
 					borderBottom={"2.5px solid white"}
 					justifyContent={"center"}
 					color={"gray.light"}

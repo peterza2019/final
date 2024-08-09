@@ -31,10 +31,11 @@ const SuggestedUsers = () => {
 
 	return (
 		<>
-			<Text mb={4} fontWeight={"bold"}>
-				Suggested Users
-			</Text>
-			<Flex direction={"column"} gap={4}>
+			<Text fontWeight={"bold"} paddingTop={50} paddingBottom={30}>
+  Suggested Users
+</Text>
+	
+				<Flex direction={"column"} gap={4}>
 				{!loading && suggestedUsers.map((user) => <SuggestedUser key={user._id} user={user} />)}
 				{loading &&
 					[0, 1, 2, 3, 4].map((_, idx) => (
