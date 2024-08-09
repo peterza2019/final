@@ -78,11 +78,11 @@ const UserPost = ({ postImg, postTitle, likes, replies }) => {
 						{likes} likes 
 						</Text>
 						<Box w={0.5} h={0.5} borderRadius={"full"} bg={"gray.light"}></Box>
-						<Text color={"gray.light"} fontSize='sm'>
-						{replies} replies
+						<Text color={"purple.400"} fontSize='sm'>
+						{replies} replies, click on speech bubble to see & reply
 						</Text>
 						<Text color={"blue.500"} fontSize='lg'>
-						 CLICK ON SPEECH BUBBLE TO REPLY
+						 
 						</Text>
 					</Flex>
 				</Flex>

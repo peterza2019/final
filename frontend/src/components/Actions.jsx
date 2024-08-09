@@ -195,7 +195,7 @@ const Actions = ({ post }) => {
 				
 				
 				<Text color={"pink.800"} fontSize='xlg'>
-					{post.replies.length} Replies CLICK TO VIEW & COMMENT
+					{post.replies.length} Replies , Click Icon to View & Comment
 				</Text>
 				<Text color={"pink.800"} fontSize='xlg'>
 					{}

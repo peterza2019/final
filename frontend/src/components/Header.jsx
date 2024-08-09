@@ -30,7 +30,7 @@ const Header = () => {
 {user && (
   <Flex direction="column" alignItems="center" gap={2}>
     <Link as={RouterLink} to='/'>
-      <Image src={homeIcon} alt="Home" w={8} h={8} />
+      <Image src={homeIcon} alt="Home" w={14} h={14} />
     </Link>
     <Text fontSize="xs">Home Screen</Text>
   </Flex>
@@ -54,7 +54,7 @@ const Header = () => {
 {user && (
   <Flex direction="column" alignItems="center" gap={2}>
     <Link as={RouterLink} to={`/${user.username}`}>
-      <Image src={avatarIcon} alt="Avatar" w={8} h={8} />
+      <Image src={avatarIcon} alt="Avatar" w={14} h={14} />
     </Link>
     <Text fontSize="xs">Profile</Text>
   </Flex>
@@ -63,7 +63,7 @@ const Header = () => {
 {user && (
   <Flex direction="column" alignItems="center" gap={2}>
     <Link as={RouterLink} to={`/suggested`}>
-      <Image src={settingsIcon} alt="Settings" w={8} h={8} />
+      <Image src={settingsIcon} alt="Settings" w={14} h={14} />
     </Link>
     <Text fontSize="xs">Pet Friends</Text>
   </Flex>

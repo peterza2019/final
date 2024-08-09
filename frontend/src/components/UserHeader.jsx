@@ -96,7 +96,7 @@ const UserHeader = ({ user }) => {
 							<Portal>
 								<MenuList bg={"gray.dark"}>
 									<MenuItem bg={"gray.dark"} onClick={copyURL}>
-										Copy & Share your Pets Profile link
+										Copy Your Pets Profile link
 									</MenuItem>
 								</MenuList>
 							</Portal>
@@ -106,12 +106,12 @@ const UserHeader = ({ user }) => {
 			</Flex>
 
 			<Flex w={"full"}>
-				<Flex flex={1} borderBottom={"1.5px solid white"} justifyContent={"center"} pb='3' cursor={"pointer"}>
+				<Flex flex={1} borderBottom={"2.5px solid white"} justifyContent={"center"} pb='3' cursor={"pointer"}>
 					<Text fontWeight={"bold"}> Posts</Text>
 				</Flex>
 				<Flex
 					flex={1}
-					borderBottom={"1px solid gray"}
+					borderBottom={"2.5px solid white"}
 					justifyContent={"center"}
 					color={"gray.light"}
 					pb='3'

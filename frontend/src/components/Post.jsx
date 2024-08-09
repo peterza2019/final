@@ -71,7 +71,8 @@ const Post = ({ post, postedBy }) => {
 							navigate(`/${user.username}`);
 						}}
 					/>
-					<Box w='1px' h={"full"} bg='gray.light' my={2}></Box>
+					<Box w='1px' h={"full"} bg='yellow.700' my={1}></Box>
+					
 					<Box position={"relative"} w={"full"}>
 						{post.replies.length === 0 && <Text textAlign={"center"}>🥱</Text>}
 						{post.replies[0] && (
@@ -111,7 +112,8 @@ const Post = ({ post, postedBy }) => {
 						)}
 					</Box>
 				</Flex>
-				<Flex flex={1} flexDirection={"column"} gap={2}>
+
+				<Flex flex={1} flexDirection={"column"} gap={5}>
 					<Flex justifyContent={"space-between"} w={"full"}>
 						<Flex w={"full"} alignItems={"center"}>
 							<Text
@@ -137,7 +139,7 @@ const Post = ({ post, postedBy }) => {
 
 					<Text fontSize={"sm"}>{post.text}</Text>
 					{post.img && (
-						<Box borderRadius={6} overflow={"hidden"} border={"2px solid"} borderColor={"orange.light"}>
+						<Box borderRadius={6} overflow={"hidden"} border={"5px solid"} borderColor={"orange.light"}>
 							<Image src={post.img} w={"full"} />
 						</Box>
 					)}
